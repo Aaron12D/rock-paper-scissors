@@ -23,21 +23,24 @@ function playRound (){
     console.log(playerChoice);
     if (playerChoice.toLowerCase() === computerChoice){
         tiePoints++;
-        alert('its a tie.' + ' round: ' + gameRound + ' computer: ' + computerPoints + ' player: ' + playerPoints + ' ties: ' + tiePoints)
+        alert('its a tie.' + ' round: ' + gameRound + ' computer: ' + computerPoints + 
+            ' player: ' + playerPoints + ' ties: ' + tiePoints)
     } else if (
         playerChoice.toLowerCase() === 'rock' && computerChoice === 'scissors' ||
         playerChoice.toLowerCase() === 'scissors' && computerChoice === 'paper' ||
         playerChoice.toLowerCase() === 'paper' && computerChoice === 'rock'
         ) {
         playerPoints++;  
-        alert('You Win! ' + playerChoice.toLowerCase() + ' beats ' + computerChoice + '!' + ' round: ' + gameRound + ' computer: ' + computerPoints + ' player: ' + playerPoints + ' ties: ' + tiePoints);          
+        alert('You Win! ' + playerChoice.toLowerCase() + ' beats ' + computerChoice + '!' + ' round: ' + gameRound + 
+            ' computer: ' + computerPoints + ' player: ' + playerPoints + ' ties: ' + tiePoints);          
     } else if (
         playerChoice.toLowerCase() === 'rock' && computerChoice === 'paper' ||
         playerChoice.toLowerCase() === 'scissors' && computerChoice === 'rock' ||
         playerChoice.toLowerCase() === 'paper' && computerChoice === 'scissors'
-    ){
+        ){
         computerPoints++;
-        alert('You Lose! ' + computerChoice + ' beats ' + playerChoice.toLowerCase() + '.' + ' round: ' + gameRound + ' computer: ' + computerPoints + ' player: ' + playerPoints + ' ties: ' + tiePoints);
+        alert('You Lose! ' + computerChoice + ' beats ' + playerChoice.toLowerCase() + '.' + ' round: ' + gameRound +
+             ' computer: ' + computerPoints + ' player: ' + playerPoints + ' ties: ' + tiePoints);
     } else {
         alert('Enter an attack.');
     }
