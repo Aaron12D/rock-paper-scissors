@@ -88,20 +88,26 @@ document.addEventListener('click', function(event){
                 playerChoice = 'rock';
                 playerImg.src = './images/stone.png'
                 console.log('player: rock');
+                playRound();
+                gameRound++;
                 break;
             case ('paper'):
                 playerChoice = 'paper';
                 playerImg.src = './images/paper.png'
                 console.log('player: paper');
+                playRound();
+                gameRound++;
                 break;
             case 'scissors':
                 playerChoice = 'scissors';
                 playerImg.src = './images/school.png'
-                console.log('player: scissors')
+                console.log('player: scissors');
+                playRound();
+                gameRound++;
+                break;
+            default:
                 break;
         };
-        playRound();
-        gameRound++;
     }; 
     if (event.target.id === 'again'){
         computerChoice = '';
